@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative './animal'
-require_relative './dog'
-require_relative './spider'
+require_relative 'animal'
+require_relative 'dog'
+require_relative 'spider'
 
 animal = Animal.new('lion', 4, 'Rex')
 dog = Dog.new('black', 'Rex')
