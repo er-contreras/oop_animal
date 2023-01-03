@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Parent Class for Animal
 class Animal
   attr_reader :id, :type, :number_of_legs
   attr_accessor :name
@@ -10,10 +13,6 @@ class Animal
   end
 
   def speak
-    if @type == 'dog'
-      'Woof, woof'
-    elsif @type == 'spider'
-      '...'
-    end
+    'grrrr'
   end
 end

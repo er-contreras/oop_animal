@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'animal'
 
+# Child parent for dog
 class Dog < Animal
   def initialize(color, name = 'Unknown')
     super('dog', 4, name)
@@ -7,9 +10,10 @@ class Dog < Animal
   end
 
   def bring_a_stick
-    "Here is your stick: ---------"
+    'Here is your stick: ---------'
+  end
+
+  def speak
+    'Woof, woof'
   end
 end
-
-dog = Dog.new('Black', 'rex')
-p dog.speak
