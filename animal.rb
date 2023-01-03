@@ -10,4 +10,12 @@ class Animal
     @number_of_legs = number_of_legs
     @type = type
   end
+
+  def speak
+    if @type == 'dog'
+      'Woof, woof'
+    elsif @type == 'spider'
+      '...'
+    end
+  end
 end
