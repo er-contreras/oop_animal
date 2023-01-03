@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Animal
   attr_reader :id, :type, :number_of_legs
   attr_accessor :name
