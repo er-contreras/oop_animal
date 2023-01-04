@@ -18,3 +18,8 @@ The third one is just taking the attributes of the parent class in order to avoi
 outputs and set some specific attributes to the child class.
 
 The fourth, is when we just add the same name of a method in different classes but with different result.
+
+## Applying Composition
+
+We add composition in order to add object of food classes in Dog, Spider and Animals. This
+help us not depend too much on inheritance.
