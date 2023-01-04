@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'remover'
+
 # Parent Class for Animal
 class Animal
   attr_reader :id, :type, :number_of_legs
@@ -14,5 +16,10 @@ class Animal
 
   def speak
     'grrrr'
+  end
+
+  def remove_leg
+    remover = Remover.new
+    @number_of_legs = remover.decrease(number_of_legs)
   end
 end
