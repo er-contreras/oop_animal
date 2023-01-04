@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
 require_relative 'animal'
+require_relative 'foods'
 
 # Child parent for dog
 class Dog < Animal
   def initialize(color, name = 'Unknown')
     super('dog', 4, name)
     @color = color
+    @liked_food = DogFood.new
   end
 
   def bring_a_stick
