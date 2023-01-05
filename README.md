@@ -23,3 +23,7 @@ The fourth, is when we just add the same name of a method in different classes b
 
 We add composition in order to add object of food classes in Dog, Spider and Animals. This
 help us not depend too much on inheritance.
+
+## UML
+
+![](UML.png)
