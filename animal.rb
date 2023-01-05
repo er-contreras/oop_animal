@@ -6,7 +6,7 @@ require_relative 'foods'
 # Parent Class for Animal
 class Animal
   attr_reader :id, :type, :number_of_legs
-  attr_accessor :name
+  attr_accessor :name, :owner
 
   def initialize(type, number_of_legs, name = 'Unknow')
     @id = Random.rand(1..1000)

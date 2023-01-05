@@ -5,9 +5,9 @@ require_relative 'dog'
 require_relative 'spider'
 require_relative 'owner'
 
-animal = Animal.new('lion', 4, 'Rex')
-dog = Dog.new('black', 'Rex')
-spider = Spider.new(85, 'Wilma')
+dog = Dog.new("black", "Rax")
+spider = Spider.new(85, "Bob")
+animal = Animal.new("lion", 4, "Some name")
 
 alex = Owner.new("Alex")
 alex.animals
@@ -16,8 +16,12 @@ alex.animals
 alex.add_animal(spider)
 alex.animals
 alex.add_animal(animal)
-alex.animals.map {|animal| animal.name}
 
-alex.animals.count
-alex.animals.first.name
-alex.animals.first.number_of_legs
+# alex.animals.last.owner.name
+
+animal.owner
+animal.owner = alex
+animal.owner
+animal.owner.name
+
+alex.animals.last.owner.name
