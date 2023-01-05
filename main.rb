@@ -11,17 +11,38 @@ animal = Animal.new("lion", 4, "Some name")
 
 alex = Owner.new("Alex")
 alex.animals
-alex.add_animal(dog)
-alex.animals
-alex.add_animal(spider)
-alex.animals
-alex.add_animal(animal)
 
-# alex.animals.last.owner.name
+dog.owner
+alex.add_animal(dog)
+dog.owner
+dog.owner.name
+alex.animals
+
+spider.owner
+alex.add_animal(spider)
+spider.owner
+spider.owner.name
+alex.animals
 
 animal.owner
-animal.owner = alex
+alex.add_animal(animal)
 animal.owner
 animal.owner.name
 
-alex.animals.last.owner.name
+
+alex.animals.count
+alex.animals.first.name
+alex.animals.first.number_of_legs
+
+
+
+second_animal = Animal.new("cat", 4, "Kitty")
+second_animal.owner
+alex.animals.count
+
+second_animal.owner = alex
+
+second_animal.owner
+alex.animals.count
+alex.animals.last
+alex.animals.last.name
