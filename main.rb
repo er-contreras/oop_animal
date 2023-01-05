@@ -4,45 +4,30 @@ require_relative 'animal'
 require_relative 'dog'
 require_relative 'spider'
 require_relative 'owner'
+require_relative 'vet'
+require_relative 'visit'
 
 dog = Dog.new("black", "Rax")
 spider = Spider.new(85, "Bob")
-animal = Animal.new("lion", 4, "Some name")
 
-alex = Owner.new("Alex")
-alex.animals
+vet_maria = Vet.new("Maria", "New York")
+vet_john = Vet.new("John", "San Francisco")
 
-dog.owner
-alex.add_animal(dog)
-dog.owner
-dog.owner.name
-alex.animals
+visit_1 = Visit.new("2017-12-22", dog, vet_maria)
+visit_2 = Visit.new("2017-12-31", dog, vet_maria)
 
-spider.owner
-alex.add_animal(spider)
-spider.owner
-spider.owner.name
-alex.animals
+dog.visits.count
+dog.visits.map { |visit| visit.date }
+vet_john.visits.count
+vet_maria.visits.count
+vet_maria.visits.map { |visit| visit.animal.name }
 
-animal.owner
-alex.add_animal(animal)
-animal.owner
-animal.owner.name
+visit_3 = Visit.new("2017-11-11", spider, vet_john)
+visit_4 = Visit.new("2017-10-10", spider, vet_maria)
 
-
-alex.animals.count
-alex.animals.first.name
-alex.animals.first.number_of_legs
-
-
-
-second_animal = Animal.new("cat", 4, "Kitty")
-second_animal.owner
-alex.animals.count
-
-second_animal.owner = alex
-
-second_animal.owner
-alex.animals.count
-alex.animals.last
-alex.animals.last.name
+spider.visits.count
+spider.visits.map { |visit| visit.date }
+vet_john.visits.count
+vet_john.visits.map { |visit| visit.animal.name }
+vet_maria.visits.count
+vet_maria.visits.map { |visit| visit.animal.name }
